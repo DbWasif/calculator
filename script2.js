@@ -1,21 +1,21 @@
-let input = document.getElementById("display");
+let display = document.getElementById('display');
 
-function appendValue(value) {
-    input.value += value; 
+function appendValue (value) {
+    display.value += value;
 }
 
-function clearInput() {
-    input.value = "";
+function clearDisplay () {
+    display.value = '';
+}
+
+function backspace () {
+    display.value = display.value.slice(0, -1);
 }
 
 function calculate() {
     try {
-        input.value = eval(display.value);
+        display.value = eval(display.value);
     } catch {
-        display.value = "Error!";
+        display.value = "Error!"
     }
-}
-
-function backspace() {
-    input.value = input.value.slice(0, -1);
 }
